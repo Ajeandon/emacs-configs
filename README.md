@@ -1,2 +1,2 @@
-#emacs-configs
+# emacs-configs
 My personal Emacs configuration
