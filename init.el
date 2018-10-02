@@ -21,6 +21,9 @@
  ;; If there is more than one, they won't work right.
  '(global-linum-mode t)
  '(linum-format (quote dynamic))
+ '(package-selected-packages
+   (quote
+    (buffer-move nyan-mode web-mode treemacs tabbar php-mode neotree move-text evil-visual-mark-mode emmet-mode doom-themes company)))
  '(tabbar-background-color nil)
  '(tabbar-mode t nil (tabbar))
  '(tabbar-separator (quote (0.2))))
@@ -43,3 +46,15 @@
 ;;; tabbar navigation
 (global-set-key [M-left] 'tabbar-backward-tab)
 (global-set-key [M-right] 'tabbar-forward-tab)
+
+;;; buffer move
+(add-to-list 'load-path "~/.emacs.d/elpa/buffer-move-0.6.2")
+(require 'buffer-move)
+(global-set-key (kbd "<C-S-up>")     'buf-move-up)
+(global-set-key (kbd "<C-S-down>")   'buf-move-down)
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;;; move text
+(global-set-key (kbd "<M-up>") 'move-text-up)
+(global-set-key (kbd "<M-down>") 'move-text-down)
