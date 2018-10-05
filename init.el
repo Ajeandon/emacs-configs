@@ -58,3 +58,9 @@
 ;;; move text
 (global-set-key (kbd "<M-up>") 'move-text-up)
 (global-set-key (kbd "<M-down>") 'move-text-down)
+
+;;; resize window
+(global-set-key (kbd "S-M-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-M-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-M-<down>") 'shrink-window)
+(global-set-key (kbd "S-M-<up>") 'enlarge-window)
